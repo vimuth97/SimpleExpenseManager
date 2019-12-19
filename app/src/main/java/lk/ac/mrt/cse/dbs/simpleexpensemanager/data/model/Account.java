@@ -20,6 +20,19 @@ package lk.ac.mrt.cse.dbs.simpleexpensemanager.data.model;
  * This POJO holds the information about an account.
  */
 public class Account {
+    public static final String TABLE_NAME = "ACCOUNT";
+
+    public static final String COLUMN_ACOOUNTNO = "accountNo";
+    public static final String COLUMN_BANKNAME = "bankName";
+    public static final String COLUMN_HOLDERNAME = "accountHolderName";
+    public static final String COLUMN_BALANCE = "balance";
+    public static final String CREATE_TABLE =
+            "CREATE TABLE IF NOT EXISTS " + TABLE_NAME + "("
+                    + COLUMN_ACOOUNTNO + " VARCHAR PRIMARY KEY ,"
+                    + COLUMN_BANKNAME + " VARCHAR,"
+                    + COLUMN_HOLDERNAME + " VARCHAR,"
+                    + COLUMN_BALANCE + " NUMERIC"
+                    + ")";
     private String accountNo;
     private String bankName;
     private String accountHolderName;
